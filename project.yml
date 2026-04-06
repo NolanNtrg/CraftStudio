@@ -1,0 +1,57 @@
+name: CraftStudio
+options:
+  bundleIdPrefix: com.craftstudio
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    PRODUCT_NAME: CraftStudio
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  CraftStudio:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: CraftStudio
+        excludes:
+          - Resources/Info.plist
+    info:
+      path: CraftStudio/Resources/Info.plist
+      properties:
+        CFBundleName: CraftStudio
+        CFBundleDisplayName: CraftStudio
+        CFBundleIdentifier: com.craftstudio.app
+        CFBundleVersion: "1"
+        CFBundleShortVersionString: "1.0.0"
+        CFBundlePackageType: APPL
+        CFBundleExecutable: CraftStudio
+        LSMinimumSystemVersion: "14.0"
+        NSPhotoLibraryAddUsageDescription: "CraftStudio souhaite enregistrer des images dans votre photothèque."
+        NSPhotoLibraryUsageDescription: "CraftStudio souhaite accéder à votre photothèque pour y enregistrer des images."
+    entitlements:
+      path: CraftStudio/CraftStudio.entitlements
+    settings:
+      base:
+        CODE_SIGN_ENTITLEMENTS: CraftStudio/CraftStudio.entitlements
+        INFOPLIST_FILE: CraftStudio/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.craftstudio.app
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_PREVIEWS: YES
+        COMBINE_HIDPI_IMAGES: YES
+        LD_RUNPATH_SEARCH_PATHS: "@executable_path/../Frameworks"
+    schemes:
+      CraftStudio:
+        build:
+          targets:
+            CraftStudio: all
+        run:
+          config: Debug
