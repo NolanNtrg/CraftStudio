@@ -64,6 +64,3 @@ create-dmg \
   "CraftStudio.dmg" \
   "/path/to/your/DerivedData/.../CraftStudio.app"
 ```
-
-## 📄 License
-*Specify your license here.*

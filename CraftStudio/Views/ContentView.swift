@@ -2,15 +2,19 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedItem: SidebarItem = .vectorize
+    @StateObject private var updateService = UpdateService()
     
     var body: some View {
         NavigationSplitView {
-            SidebarContent(selectedItem: $selectedItem)
+            SidebarContent(selectedItem: $selectedItem, updateService: updateService)
                 .navigationSplitViewColumnWidth(min: 200, ideal: 220, max: 260)
         } detail: {
             DetailContent(selectedItem: selectedItem)
         }
         .background(Color.csBackground)
+        .task {
+            await updateService.checkForUpdates()
+        }
     }
 }
 
@@ -18,6 +22,7 @@ struct ContentView: View {
 
 struct SidebarContent: View {
     @Binding var selectedItem: SidebarItem
+    @ObservedObject var updateService: UpdateService
     
     var body: some View {
         VStack(spacing: 0) {
@@ -51,20 +56,46 @@ struct SidebarContent: View {
         
             Spacer()
 
-            Text("Fait avec amour par Nolan ❤️")
-                .font(.csSmall)
-                .foregroundStyle(Color.csTextTertiary)
-
-            Text("(promis j'ai un peu codé)")
-                .font(.csSmall)
+            HStack(alignment: .center, spacing: CSSpacing.sm) {
+                let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
+                Text("v\(appVersion)")
+                    .font(.csSmall)
+                    .foregroundStyle(Color.csTextTertiary)
+                
+                if updateService.isUpdateAvailable {
+                    Image(systemName: "exclamationmark.circle.fill")
+                        .foregroundStyle(Color.orange)
+                        .font(.system(size: 10))
+                        .help("Une mise à jour (v\(updateService.latestVersionString)) est disponible !")
+                }
+            }
+            .padding(.bottom, CSSpacing.sm)
+            
+            if updateService.isUpdateAvailable, let url = updateService.latestReleaseURL {
+                Button(action: {
+                    NSWorkspace.shared.open(url)
+                }) {
+                    Text("Mettre à jour")
+                        .font(.system(size: 11, weight: .medium))
+                        .foregroundStyle(Color.white)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 4)
+                        .background(Color.orange)
+                        .cornerRadius(4)
+                }
+                .buttonStyle(.plain)
+                .padding(.bottom, CSSpacing.md)
+            } else {
+                Button("Vérifier les mises à jour") {
+                    Task {
+                        await updateService.checkForUpdates(explicit: true)
+                    }
+                }
+                .buttonStyle(.plain)
+                .font(.system(size: 10))
                 .foregroundStyle(Color.csTextTertiary)
                 .padding(.bottom, CSSpacing.md)
-
-            // Version
-            Text("v1.0")
-                .font(.csSmall)
-                .foregroundStyle(Color.csTextTertiary)
-                .padding(.bottom, CSSpacing.md)
+            }
         }
         .background(Color.csSurface)
     }
