@@ -50,14 +50,21 @@ class AudioConversionService {
         return try await Task.detached {
             let process = Process()
             process.executableURL = URL(fileURLWithPath: ytDlpPath)
-            process.arguments = [
+            var args = [
                 "-x",                       // extract audio
                 "--audio-format", "mp3",    // convert to MP3
                 "--audio-quality", "0",     // best quality
                 "--no-playlist",            // single video only
-                "-o", outputTemplate,       // output path
-                trimmed                     // the URL
+                "-o", outputTemplate        // output path
             ]
+            
+            if let ffmpegPath = self.findFfmpeg() {
+                args.append(contentsOf: ["--ffmpeg-location", ffmpegPath])
+            }
+            
+            args.append(trimmed)            // the URL
+            
+            process.arguments = args
             
             let pipe = Pipe()
             process.standardOutput = pipe
@@ -117,6 +124,11 @@ class AudioConversionService {
     // MARK: - Find yt-dlp
     
     private func findYtDlp() -> String? {
+        if let bundlePath = Bundle.main.url(forResource: "yt-dlp", withExtension: nil, subdirectory: "bin")?.path,
+           FileManager.default.fileExists(atPath: bundlePath) {
+            return bundlePath
+        }
+        
         let paths = [
             "/opt/homebrew/bin/yt-dlp",
             "/usr/local/bin/yt-dlp",
@@ -124,5 +136,13 @@ class AudioConversionService {
             "\(NSHomeDirectory())/.local/bin/yt-dlp"
         ]
         return paths.first { FileManager.default.fileExists(atPath: $0) }
+    }
+    
+    private func findFfmpeg() -> String? {
+        if let bundlePath = Bundle.main.url(forResource: "ffmpeg", withExtension: nil, subdirectory: "bin")?.path,
+           FileManager.default.fileExists(atPath: bundlePath) {
+            return bundlePath
+        }
+        return nil
     }
 }

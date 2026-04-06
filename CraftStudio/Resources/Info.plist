@@ -17,11 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>1.0.2</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>14.0</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>CraftStudio utilise le Bluetooth pour se connecter à l'imprimante thermique.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>CraftStudio souhaite enregistrer des images dans votre photothèque.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

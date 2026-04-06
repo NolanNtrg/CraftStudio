@@ -1,0 +1,159 @@
+{
+  "" : {
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudio-primary.dia",
+    "emit-module-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudio-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudio-primary-emit-module.dia",
+    "pch" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudio-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudio-primary.swiftdeps"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/App/CraftStudioApp.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudioApp.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudioApp.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudioApp.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudioApp.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudioApp.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudioApp.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudioApp.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/CraftStudioApp~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Canvas/EraserCanvasView.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserCanvasView.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserCanvasView.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserCanvasView.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserCanvasView.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserCanvasView.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserCanvasView.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserCanvasView.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserCanvasView~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Components/ActionButton.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ActionButton.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ActionButton.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ActionButton.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ActionButton.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ActionButton.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ActionButton.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ActionButton.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ActionButton~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Components/DropZoneView.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DropZoneView.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DropZoneView.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DropZoneView.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DropZoneView.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DropZoneView.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DropZoneView.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DropZoneView.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DropZoneView~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Components/ProgressOverlay.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ProgressOverlay.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ProgressOverlay.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ProgressOverlay.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ProgressOverlay.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ProgressOverlay.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ProgressOverlay.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ProgressOverlay.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ProgressOverlay~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Services/AudioConversionService.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/AudioConversionService.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/AudioConversionService.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/AudioConversionService.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/AudioConversionService.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/AudioConversionService.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/AudioConversionService.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/AudioConversionService.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/AudioConversionService~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Services/ImageExportService.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ImageExportService.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ImageExportService.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ImageExportService.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ImageExportService.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ImageExportService.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ImageExportService.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ImageExportService.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ImageExportService~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Services/UpdateService.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/UpdateService.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/UpdateService.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/UpdateService.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/UpdateService.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/UpdateService.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/UpdateService.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/UpdateService.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/UpdateService~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Services/VectorizationService.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizationService.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizationService.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizationService.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizationService.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizationService.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizationService.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizationService.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizationService~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Theme/DesignSystem.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DesignSystem.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DesignSystem.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DesignSystem.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DesignSystem.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DesignSystem.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DesignSystem.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DesignSystem.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/DesignSystem~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Views/ContentView.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Views/ConverterView.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ConverterView.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ConverterView.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ConverterView.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ConverterView.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ConverterView.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ConverterView.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ConverterView.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/ConverterView~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Views/EraserView.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserView.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserView.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserView.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserView.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserView.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserView.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserView.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/EraserView~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/CraftStudio/Views/VectorizeView.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizeView.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizeView.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizeView.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizeView.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizeView.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizeView.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizeView.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/VectorizeView~partial.swiftmodule"
+  },
+  "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/notargin/Projets/CraftStudio/DerivedData/Build/Intermediates.noindex/CraftStudio.build/Debug/CraftStudio.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

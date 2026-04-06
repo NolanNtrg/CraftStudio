@@ -11,6 +11,7 @@ struct EraserView: View {
     @State private var successPath: String?
     @State private var canvasKey = UUID() // Force canvas refresh
     @State private var undoTrigger = 0
+    @State private var isPenMode = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -25,13 +26,16 @@ struct EraserView: View {
                 }
             } else {
                 // Editing Mode
-                VStack(spacing: 0) {
+                VStack(spacing: CSSpacing.sm) {
                     // Toolbar
                     toolbar
                     
                     // Canvas
                     canvas
                         .padding(.horizontal, CSSpacing.md)
+                    
+                    // Export Buttons
+                    exportButtons
                         .padding(.bottom, CSSpacing.md)
                 }
             }
@@ -114,14 +118,45 @@ struct EraserView: View {
     // MARK: - Toolbar
     
     private var toolbar: some View {
-        HStack(spacing: CSSpacing.lg) {
+        HStack(spacing: CSSpacing.md) {
+            // Outil control
+            HStack(spacing: 0) {
+                Button(action: { isPenMode = false }) {
+                    Image(systemName: "eraser.fill")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundStyle(isPenMode ? Color.csTextSecondary : Color.csSurface)
+                        .frame(width: 36, height: 32)
+                        .contentShape(Rectangle())
+                        .background(isPenMode ? Color.clear : Color.csAccent)
+                        .clipShape(RoundedRectangle(cornerRadius: CSRadius.small, style: .continuous))
+                }
+                .buttonStyle(.plain)
+                
+                Button(action: { isPenMode = true }) {
+                    Image(systemName: "pencil")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundStyle(isPenMode ? Color.csSurface : Color.csTextSecondary)
+                        .frame(width: 36, height: 32)
+                        .contentShape(Rectangle())
+                        .background(isPenMode ? Color.csAccent : Color.clear)
+                        .clipShape(RoundedRectangle(cornerRadius: CSRadius.small, style: .continuous))
+                }
+                .buttonStyle(.plain)
+            }
+            .padding(2)
+            .background(Color.csSurfaceSecondary)
+            .clipShape(RoundedRectangle(cornerRadius: CSRadius.small + 2, style: .continuous))
+            
+            Divider()
+                .frame(height: 20)
+
             // Brush size control
             HStack(spacing: CSSpacing.sm) {
                 Image(systemName: "circle.fill")
                     .font(.system(size: 8))
                     .foregroundStyle(Color.csTextSecondary)
                 
-                Slider(value: $brushSize, in: 5...80, step: 1)
+                Slider(value: $brushSize, in: 1...80, step: 1)
                     .tint(Color.csAccent)
                     .background(
                         Capsule()
@@ -169,19 +204,9 @@ struct EraserView: View {
             .buttonStyle(.plain)
             
             Spacer()
-            
-            // Save button
-            ActionButton(
-                title: "Enregistrer PNG",
-                icon: "square.and.arrow.down",
-                style: .primary,
-                isDisabled: resultImage == nil
-            ) {
-                saveResult()
-            }
         }
         .padding(.horizontal, CSSpacing.xl)
-        .padding(.vertical, CSSpacing.sm)
+        .padding(.vertical, CSSpacing.xs)
         .background(Color.csSurface)
         .overlay(alignment: .bottom) {
             Divider()
@@ -196,6 +221,7 @@ struct EraserView: View {
                 EraserCanvasView(
                     image: image,
                     brushSize: $brushSize,
+                    isPenMode: $isPenMode,
                     resultImage: $resultImage,
                     undoTrigger: $undoTrigger,
                     onUpdate: {}
@@ -208,6 +234,30 @@ struct EraserView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.csSurfaceSecondary)
         .clipShape(RoundedRectangle(cornerRadius: CSRadius.large, style: .continuous))
+    }
+    
+    // MARK: - Export Buttons
+    
+    private var exportButtons: some View {
+        HStack(spacing: CSSpacing.md) {
+            ActionButton(
+                title: "Enregistrer dans le Finder",
+                icon: "folder",
+                style: .primary,
+                isDisabled: resultImage == nil
+            ) {
+                saveToFinder()
+            }
+            
+            ActionButton(
+                title: "Enregistrer dans Photos",
+                icon: "photo.badge.arrow.down",
+                style: .secondary,
+                isDisabled: resultImage == nil
+            ) {
+                saveResult()
+            }
+        }
     }
     
     // MARK: - Error Banner
@@ -245,7 +295,7 @@ struct EraserView: View {
         }
     }
     
-    private func saveResult() {
+    private func saveToFinder() {
         guard let image = resultImage else { return }
         
         do {
@@ -259,6 +309,26 @@ struct EraserView: View {
             }
         } catch {
             errorMessage = error.localizedDescription
+        }
+    }
+    
+    private func saveResult() {
+        guard let image = resultImage else { return }
+        
+        Task {
+            do {
+                try await ImageExportService.shared.saveToPhotos(image: image)
+                await MainActor.run {
+                    withAnimation {
+                        successMessage = "Image ajoutée à la photothèque"
+                        successPath = nil
+                    }
+                }
+            } catch {
+                await MainActor.run {
+                    errorMessage = error.localizedDescription
+                }
+            }
         }
     }
     

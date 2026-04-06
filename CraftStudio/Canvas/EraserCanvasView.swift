@@ -6,6 +6,7 @@ import AppKit
 struct EraserCanvasView: NSViewRepresentable {
     let image: NSImage
     @Binding var brushSize: CGFloat
+    @Binding var isPenMode: Bool
     @Binding var resultImage: NSImage?
     @Binding var undoTrigger: Int
     let onUpdate: () -> Void
@@ -20,6 +21,7 @@ struct EraserCanvasView: NSViewRepresentable {
         let view = EraserNSView()
         view.setImage(image)
         view.brushSize = brushSize
+        view.isPenMode = isPenMode
         context.coordinator.lastUndoTrigger = undoTrigger
         view.onImageUpdate = { updatedImage in
             DispatchQueue.main.async {
@@ -32,6 +34,7 @@ struct EraserCanvasView: NSViewRepresentable {
     
     func updateNSView(_ nsView: EraserNSView, context: Context) {
         nsView.brushSize = brushSize
+        nsView.isPenMode = isPenMode
         
         // Check if undo was triggered from SwiftUI
         if undoTrigger != context.coordinator.lastUndoTrigger {
@@ -50,6 +53,7 @@ class EraserNSView: NSView {
     private var sourceSize: CGSize = .zero
     
     var brushSize: CGFloat = 30.0
+    var isPenMode: Bool = false
     var onImageUpdate: ((NSImage) -> Void)?
     
     private var undoStack: [Data] = []
@@ -214,7 +218,8 @@ class EraserNSView: NSView {
         guard let imagePoint = viewPointToImagePoint(viewPoint) else { return }
         lastImagePoint = imagePoint
         
-        editContext?.setFillColor(CGColor(red: 1, green: 1, blue: 1, alpha: 1))
+        let color = isPenMode ? CGColor(red: 0, green: 0, blue: 0, alpha: 1) : CGColor(red: 1, green: 1, blue: 1, alpha: 1)
+        editContext?.setFillColor(color)
         editContext?.fillEllipse(in: CGRect(
             x: imagePoint.x - brushSize / 2,
             y: imagePoint.y - brushSize / 2,
@@ -231,7 +236,8 @@ class EraserNSView: NSView {
             guard let imagePoint = viewPointToImagePoint(viewPoint) else { return }
             
             if let lastPoint = lastImagePoint {
-                editContext?.setStrokeColor(CGColor(red: 1, green: 1, blue: 1, alpha: 1))
+                let color = isPenMode ? CGColor(red: 0, green: 0, blue: 0, alpha: 1) : CGColor(red: 1, green: 1, blue: 1, alpha: 1)
+                editContext?.setStrokeColor(color)
                 editContext?.setLineWidth(brushSize)
                 editContext?.setLineCap(.round)
                 editContext?.setLineJoin(.round)

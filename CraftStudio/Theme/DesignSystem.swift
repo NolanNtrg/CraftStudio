@@ -104,6 +104,7 @@ enum SidebarItem: String, CaseIterable, Identifiable {
     case vectorize = "Vectoriser"
     case eraser = "Gommer"
     case converter = "Convertir Audio"
+    case print = "Imprimer"
     
     var id: String { rawValue }
     
@@ -112,6 +113,7 @@ enum SidebarItem: String, CaseIterable, Identifiable {
         case .vectorize: return "wand.and.stars"
         case .eraser: return "eraser.fill"
         case .converter: return "waveform"
+        case .print: return "printer.fill"
         }
     }
     
@@ -120,6 +122,7 @@ enum SidebarItem: String, CaseIterable, Identifiable {
         case .vectorize: return "Transformez vos images en vecteurs"
         case .eraser: return "Nettoyez vos images facilement"
         case .converter: return "Extrayez l'audio de vos vidéos"
+        case .print: return "Imprimez vos modèles"
         }
     }
 }

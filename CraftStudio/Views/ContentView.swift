@@ -1,4 +1,5 @@
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct ContentView: View {
     @State private var selectedItem: SidebarItem = .vectorize
@@ -154,6 +155,8 @@ struct DetailContent: View {
                 EraserView()
             case .converter:
                 ConverterView()
+            case .print:
+                PrintView()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
