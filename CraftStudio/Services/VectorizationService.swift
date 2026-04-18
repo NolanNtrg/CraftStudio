@@ -93,7 +93,6 @@ class VectorizationService {
         return """
         <?xml version="1.0" encoding="UTF-8"?>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 \(width) \(height)" width="\(width)" height="\(height)">
-          <rect width="\(width)" height="\(height)" fill="#FFFFFF"/>
           <path d="\(pathString)" fill="#000000" fill-rule="evenodd"/>
         </svg>
         """
@@ -135,8 +134,9 @@ class VectorizationService {
             return image
         }
         
-        ctx.setFillColor(NSColor.white.cgColor)
-        ctx.fill(CGRect(origin: .zero, size: size))
+        // Transparence complète, on ne remplit plus d'un fond blanc.
+        // ctx.setFillColor(NSColor.white.cgColor)
+        // ctx.fill(CGRect(origin: .zero, size: size))
         
         var transform = CGAffineTransform(scaleX: CGFloat(width), y: CGFloat(height))
         if let scaledPath = normalizedPath.copy(using: &transform) {

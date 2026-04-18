@@ -85,13 +85,65 @@ class BluetoothPrinterService: NSObject, ObservableObject {
         // Initialization standard ESC/POS
         data.append(contentsOf: [0x1B, 0x40])
         
-        // NOTE: Implémentation générique de la structure du paquet
-        // Pour les Phomemo TP31 / M02, il faut traiter l'image en un tableau de pixels N&B.
-        // Chaque ligne de l'image est ensuite encodée en série d'octets bit-à-bit.
-        // Ceci est le squelette qui pourra être adapté avec les paquets propres s'ils sont spécifiques.
+        let width = Int(image.size.width)
+        let height = Int(image.size.height)
         
-        // Ajout fictif pour la compilation de la structure :
-        // data.append(...) -> Matrice
+        let rep = NSBitmapImageRep(
+            bitmapDataPlanes: nil,
+            pixelsWide: width,
+            pixelsHigh: height,
+            bitsPerSample: 8,
+            samplesPerPixel: 1, // Grayscale
+            hasAlpha: false,
+            isPlanar: false,
+            colorSpaceName: .calibratedWhite,
+            bytesPerRow: width,
+            bitsPerPixel: 8
+        )
+        
+        guard let bitmapRep = rep else { return data }
+        
+        NSGraphicsContext.saveGraphicsState()
+        NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: bitmapRep)
+        
+        // Fond blanc pour éliminer la transparence
+        NSColor.white.set()
+        NSRect(x: 0, y: 0, width: width, height: height).fill()
+        
+        image.draw(in: NSRect(x: 0, y: 0, width: width, height: height))
+        
+        NSGraphicsContext.restoreGraphicsState()
+        
+        let widthInBytes = (width + 7) / 8
+        
+        // GS v 0 (print raster bit image, normal size)
+        data.append(contentsOf: [0x1D, 0x76, 0x30, 0x00])
+        data.append(contentsOf: [UInt8(widthInBytes % 256), UInt8(widthInBytes / 256)])
+        data.append(contentsOf: [UInt8(height % 256), UInt8(height / 256)])
+        
+        guard let pixelData = bitmapRep.bitmapData else { return data }
+        
+        for y in 0..<height {
+            for xByte in 0..<widthInBytes {
+                var byte: UInt8 = 0
+                for bit in 0..<8 {
+                    let x = xByte * 8 + bit
+                    if x < width {
+                        // Les coordonnées d'image NSBitmap sont stockées avec (0,0) en haut à gauche
+                        let pixelIndex = y * bitmapRep.bytesPerRow + x
+                        let intensity = pixelData[pixelIndex]
+                        // Seuil pour Noir (< 128)
+                        if intensity < 128 { 
+                            byte |= (1 << (7 - bit))
+                        }
+                    }
+                }
+                data.append(byte)
+            }
+        }
+        
+        // Avance de papier
+        data.append(contentsOf: [0x1B, 0x64, 0x05]) // Feed 5 lines
         
         return data
     }
