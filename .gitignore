@@ -2,3 +2,4 @@
 *.dmg
 CraftStudio/Resources/bin/
 .agents/
+DerivedData/
