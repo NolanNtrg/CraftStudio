@@ -1,0 +1,19 @@
+name: Test Runner Proxmox
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Permet de lancer le test manuellement depuis GitHub (très pratique !)
+
+jobs:
+  test-connexion:
+    runs-on: self-hosted # C'est le mot magique pour appeler ton serveur
+    
+    steps:
+      - name: 📥 Récupérer le code (Checkout)
+        uses: actions/checkout@v4
+
+      - name: 🚀 Test de communication
+        run: echo "Succès ! Le runner Debian de BearStudio a bien intercepté le push sur le projet CraftStudio."
+        
+      - name: 📂 Lister les fichiers du repo
+        run: ls -la
