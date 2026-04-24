@@ -12,7 +12,7 @@ jobs:
       - name: 📥 Récupérer le code (Checkout)
         uses: actions/checkout@v4
 
-      - name: 🚀 Test de communication
+      - name: 🚀 Test de communication !
         run: echo "Succès ! Le runner Debian de BearStudio a bien intercepté le push sur le projet CraftStudio."
         
       - name: 📂 Lister les fichiers du repo
